@@ -4,8 +4,7 @@ import sqlite3
 from datetime import *
 import os 
 import datetime
-
-
+from flask import make_response
 
 app = Flask(__name__)
 
@@ -13,7 +12,16 @@ app = Flask(__name__)
 @app.route('/')
 def home():
     return render_template("Page_d'accueil.html")
-    
+
+@app.route('/sitemap.xml')
+def sitemap():
+    # On charge le template XML
+    sitemap_xml = render_template("sitemap.xml")
+    # On précise bien à Google que c'est du contenu XML
+    response = make_response(sitemap_xml)
+    response.headers["Content-Type"] = "application/xml"
+    return response
+
 @app.route('/desc_hexa')
 def desc_hexa():
     return render_template("Description_Hexadecimal.html")
