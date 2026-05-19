@@ -33,7 +33,13 @@ def desc_trithemius():
 @app.route('/jeu')
 def jeu():
     return render_template("Jeu.html")
-
+    
+@app.route('/sitemap.xml')
+def sitemap():
+    import flask
+    response = flask.make_response(render_template('sitemap.xml'))
+    response.headers['Content-Type'] = 'application/xml'
+    return response
 
 @app.route('/vernam', methods=['GET', 'POST'])
 def vernam():
