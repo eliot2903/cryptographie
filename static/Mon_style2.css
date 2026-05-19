@@ -20,6 +20,9 @@ header {
     justify-content: space-between;
     padding: 20px 40px;
 }
+a{
+    color: yellow;
+}
 
 /* LOGO */
 .logo {
