@@ -123,7 +123,7 @@ def chiffre_de_Trithémius(texte,mode="cryptage"):
     """
     alphabet_min=string.ascii_lowercase
     alphabet_maj=string.ascii_uppercase
-    indice=1
+    indice=0
     indice_a=0
     texte_final=""
     for i in texte:
