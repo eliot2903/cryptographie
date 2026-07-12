@@ -2,14 +2,14 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <!-- Page d'accueil -->
   <url>
-    <loc>https://ton-site.com/</loc>
+    <loc>https://cryptographie.ddns.net/</loc>
     <changefreq>monthly</changefreq>
     <priority>1.00</priority>
   </url>
 
   <!-- Outils de chiffrement -->
   <url>
-    <loc>https://ton-site.com/vigenere</loc>
+    <loc>https://cryptographie.ddns.net/vigenere</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
@@ -19,34 +19,34 @@
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ton-site.com/trithemius</loc>
+    <loc>https://cryptographie.ddns.net/trithemius</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ton-site.com/caesar</loc>
+    <loc>https://cryptographie.ddns.net/caesar</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ton-site.com/rot13</loc>
+    <loc>https://cryptographie.ddns.net/rot13</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
   <url>
-    <loc>https://ton-site.com/hexadecimal</loc>
+    <loc>https://cryptographie.ddns.net/hexadecimal</loc>
     <changefreq>monthly</changefreq>
     <priority>0.80</priority>
   </url>
 
   <!-- Fonctionnalités annexes -->
   <url>
-    <loc>https://ton-site.com/history</loc>
+    <loc>https://cryptographie.ddns.net/history</loc>
     <changefreq>daily</changefreq>
     <priority>0.50</priority>
   </url>
   <url>
-    <loc>https://ton-site.com/game</loc>
+    <loc>https://cryptographie.ddns.net/game</loc>
     <changefreq>monthly</changefreq>
     <priority>0.70</priority>
   </url>
