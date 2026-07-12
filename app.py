@@ -58,8 +58,15 @@ def google_verification():
     
 @app.route('/sitemap.xml')
 def serve_sitemap():
-    # Envoie le fichier sitemap.xml avec le bon mimetype pour les moteurs de recherche
-    return send_from_directory('.', 'sitemap.xml', mimetype='application/xml')
+    try:
+        # On ouvre et on lit le fichier proprement en UTF-8
+        with open('sitemap.xml', 'r', encoding='utf-8') as f:
+            content = f.read()
+        # On renvoie le contenu avec le bon format XML
+        return Response(content, mimetype='application/xml')
+    except Exception as e:
+        # Si ça plante, on affiche l'erreur exacte sur la page web
+        return f"Erreur Flask (Sitemap) : {str(e)}", 500
 
 @app.route('/vernam', methods=['GET', 'POST'])
 def vernam():
