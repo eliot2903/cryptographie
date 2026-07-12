@@ -51,6 +51,12 @@ def desc_rot13():
 def jeu():
     return render_template("Jeu.html")
 
+@app.route('/googleb8007cc217fdedbc.html') # <- Remplace par TON nom de fichier
+def google_verification():
+    # Renvoie directement le texte que Google veut lire
+    return "google-site-verification: googleb8007cc217fdedbc.html"
+
+
 @app.route('/vernam', methods=['GET', 'POST'])
 def vernam():
     if request.method == 'POST':
