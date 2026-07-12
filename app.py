@@ -55,7 +55,11 @@ def jeu():
 def google_verification():
     # Renvoie directement le texte que Google veut lire
     return "google-site-verification: googleb8007cc217fdedbc.html"
-
+    
+@app.route('/sitemap.xml')
+def serve_sitemap():
+    # Envoie le fichier sitemap.xml avec le bon mimetype pour les moteurs de recherche
+    return send_from_directory('.', 'sitemap.xml', mimetype='application/xml')
 
 @app.route('/vernam', methods=['GET', 'POST'])
 def vernam():
