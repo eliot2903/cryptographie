@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Historique - Cryptographie</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Mon_style2.css') }}">
+    <style>
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; color: white; }
+        th, td { padding: 12px; border: 1px solid #FFD700; text-align: left; }
+        th { background-color: rgba(255, 215, 0, 0.2); }
+        .confirmation { color: #00ffcc; margin-top: 15px; font-weight: bold; }
+    </style>
+</head>
+<body>
+<header>
+    <div class="logo">
+        <img src="{{ url_for('static', filename='Logo.png') }}" alt="logo" class="logo-img">
+    </div>
+    <nav>
+        <a href="/">Page d'accueil</a>
+        <a href="/vigenere">Chiffre de Vigenère</a>
+        <a href="/vernam">Chiffre de Vernam</a>
+        <a href="/hexa">Hexadécimal</a>
+        <a href="/trithemius">Trithémius</a>
+        <a href="/cesar">César</a>
+        <a href="/rot13">ROT13</a>
+        <a href="#">Historique</a>
+    </nav>
+</header>
+
+<div id="cursor"></div>
+<div id="cursor-ring"></div>
+
+<div class="main">
+    <div class="card" style="width: 90%; max-width: 1000;">
+        <h1> Historique des 10 derniers messages</h1>
+        {% if message %}
+        <p class="confirmation">{{ message }}</p>
+        {% endif %}
+        <table>
+            <thead>
+                <tr>
+                    <th>Méthode</th>
+                    <th>Message Original</th>
+                    <th>Résultat</th>
+                    <th>Date</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in historique %}
+                <tr>
+                    <td>{{ item[0] }}</td>
+                    <td>{{ item[1] }}</td>
+                    <td>{{ item[2] }}</td>
+                    <td>{{ item[3] }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+</div>
+<form method="POST">
+    <div class="buttons">
+        <button type="submit">Supprimer l'historique</button>
+    </div>
+</form>
+<script src="{{ url_for('static', filename='cursor.js') }}"></script>
+</body>
+</html>
